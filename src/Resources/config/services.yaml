@@ -1,0 +1,27 @@
+services:
+
+  Jbtronics\DompdfFontLoaderBundle\Services\DompdfFactoryInterface:
+    alias: jbtronics_dompdf_font_loader.dompdf_factory
+
+  jbtronics_dompdf_font_loader.dompdf_factory:
+    class: Jbtronics\DompdfFontLoaderBundle\Services\DompdfFactory
+
+  jbtroncis_dompdf_font_loader.dompdf_font_loader:
+    class: Jbtronics\DompdfFontLoaderBundle\Services\DompdfFontLoader
+
+  jbtronics_dompdf_font_loader.configured_fonts_installer:
+    class: Jbtronics\DompdfFontLoaderBundle\Services\ConfiguredFontsInstaller
+    arguments:
+      $dompdfFactory: '@Jbtronics\DompdfFontLoaderBundle\Services\DompdfFactoryInterface'
+      $fontLoader: '@jbtroncis_dompdf_font_loader.dompdf_font_loader'
+      $fonts: '%jbtronics_dompdf_font_loader.fonts%'
+      $autodiscoveryPaths: '%jbtronics_dompdf_font_loader.autodiscovery.paths%'
+      $autodiscoveryExcludePatterns: '%jbtronics_dompdf_font_loader.autodiscovery.exclude_patterns%'
+      $autodiscoveryFilePattern: '%jbtronics_dompdf_font_loader.autodiscovery.file_pattern%'
+
+  jbtronics_dompdf_font_loader.cache_warmer:
+    class: Jbtronics\DompdfFontLoaderBundle\CacheWarmer\DompdfFontLoaderCacheWarmer
+    tags: ['kernel.cache_warmer']
+    arguments:
+        $isEnabled: '%jbtronics_dompdf_font_loader.auto_install%'
+        $configuredFontsInstaller: '@jbtronics_dompdf_font_loader.configured_fonts_installer'
