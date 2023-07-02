@@ -2,7 +2,7 @@
   "name": "jbtronics/dompdf-font-loader-bundle",
   "type": "symfony-bundle",
   "license": "MIT",
-  "description": "Automatically load fonts for Dompdf in Symfony",
+  "description": "A symfony bundle to easily load custom fonts for dompdf (on cache warming)",
   "keywords": ["dompdf", "fonts", "symfony", "symfony-bundle"],
   "autoload": {
     "psr-4": {
