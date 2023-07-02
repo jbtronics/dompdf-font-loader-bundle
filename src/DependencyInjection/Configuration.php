@@ -51,7 +51,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarPrototype()->end()->defaultValue([])
                 ->beforeNormalization()->castToArray()->end()
             ->end()
-                ->scalarNode('file_pattern')->defaultValue('/\.(ttf|otf)$/')->end()
+                ->scalarNode('file_pattern')->defaultValue('/\.(ttf)$/')->end()
             ->end()
             ->end();
             ;

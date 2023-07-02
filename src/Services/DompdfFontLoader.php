@@ -9,7 +9,7 @@ use Symfony\Component\Finder\Finder;
 class DompdfFontLoader
 {
 
-    public final const DEFAULT_FILE_PATTERN = '/\.(ttf|otf)$/';
+    public final const DEFAULT_FILE_PATTERN = '/\.(ttf)$/';
 
 
     /**
