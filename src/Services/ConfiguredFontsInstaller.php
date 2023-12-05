@@ -5,12 +5,12 @@ namespace Jbtronics\DompdfFontLoaderBundle\Services;
 class ConfiguredFontsInstaller
 {
     public function __construct(
-        private DompdfFactoryInterface $dompdfFactory,
-        private DompdfFontLoader $fontLoader,
-        private array $fonts,
-        private array $autodiscoveryPaths,
-        private array $autodiscoveryExcludePatterns,
-        private string $autodiscoveryFilePattern
+        private readonly DompdfFactoryInterface $dompdfFactory,
+        private readonly DompdfFontLoader $fontLoader,
+        private readonly array $fonts,
+        private readonly array $autodiscoveryPaths,
+        private readonly array $autodiscoveryExcludePatterns,
+        private readonly string $autodiscoveryFilePattern
     ) {
 
     }

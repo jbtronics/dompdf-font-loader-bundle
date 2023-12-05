@@ -27,18 +27,18 @@ enum FontFamilyType: string
         //Check if the file name contains a suffix for bold_italic
         //We have to check this first, because the other checks would also match for bold_italic
         if (preg_match('/_b(ol)?d?_?i(t)?(al)?(ic)?$/i', $font_file_name)) {
-            return FontFamilyType::BOLD_ITALIC;
+            return self::BOLD_ITALIC;
         }
         //Check if the file name contains a suffix for bold
         if (preg_match('/_b(ol)?d?$/i', $font_file_name)) {
-            return FontFamilyType::BOLD;
+            return self::BOLD;
         }
         //Check if the file name contains a suffix for italic
         if (preg_match('/_i(t)?(al)?(ic)?$/i', $font_file_name)) {
-            return FontFamilyType::ITALIC;
+            return self::ITALIC;
         }
 
         //If nothing else matches, we consider it normal
-        return FontFamilyType::NORMAL;
+        return self::NORMAL;
     }
 }

@@ -12,12 +12,12 @@ class DompdfFontLoaderCacheWarmer implements CacheWarmerInterface
 
     }
 
-    public function isOptional()
+    public function isOptional(): bool
     {
         return true;
     }
 
-    public function warmUp(string $cacheDir)
+    public function warmUp(string $cacheDir, string $buildDir = null): array
     {
         if (!$this->isEnabled) {
             return [];

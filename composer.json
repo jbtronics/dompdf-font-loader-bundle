@@ -18,9 +18,9 @@
   "require": {
     "php": "^8.1",
     "ext-json": "*",
-    "symfony/framework-bundle": "^6.0",
+    "symfony/framework-bundle": "^6.0|^7.0",
     "dompdf/dompdf": "v1.0.0|v2.0.3",
-    "symfony/finder": "^6.0"
+    "symfony/finder": "^6.0|^7.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
