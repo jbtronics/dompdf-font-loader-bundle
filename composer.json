@@ -19,7 +19,7 @@
     "php": "^8.1",
     "ext-json": "*",
     "symfony/framework-bundle": "^6.0|^7.0",
-    "dompdf/dompdf": "^1.0.0|^2.0.0",
+    "dompdf/dompdf": "^1.0.0|^2.0.0|^3.0.0",
     "symfony/finder": "^6.0|^7.0"
   },
   "require-dev": {
