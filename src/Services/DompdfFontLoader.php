@@ -94,7 +94,7 @@ class DompdfFontLoader
      * @param  string|null  $bold_italic The path to the bold italic font file (optional, must be a .ttf or .otf file)
      * @return void
      */
-    public function installFontFamily(Dompdf $dompdf, string $fontname, string $normal, string $bold = null, string $italic = null, string $bold_italic = null): void
+    public function installFontFamily(Dompdf $dompdf, string $fontname, string $normal, ?string $bold = null, ?string $italic = null, ?string $bold_italic = null): void
     {
         //Retrieve the font metrics instance
         $fontMetrics = $dompdf->getFontMetrics();
