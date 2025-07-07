@@ -53,7 +53,6 @@ class Configuration implements ConfigurationInterface
             ->end()
                 ->scalarNode('file_pattern')->defaultValue('/\.(ttf)$/')->end()
             ->end()
-            ->end()
             ;
 
             $node->canBeDisabled();
