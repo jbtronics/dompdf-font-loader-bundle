@@ -10,7 +10,7 @@ You can specify each font family with a name and a path to the font files or you
 * Autodiscover all fonts in configured directories
 
 ## Requirements
-* Symfony 6
+* Symfony 6+
 * PHP 8.1 or later
 
 ## Installation
